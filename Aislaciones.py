@@ -2,16 +2,15 @@ import streamlit as st
 import pyodbc
 import pandas as pd
 import plotly.express as px
-import warnings
 
-warnings.filterwarnings('ignore')
 
 st.set_page_config(layout="wide")
-@st.cache_data
+
 def load_data():
 
     conn_str = (r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-                r'DBQ=Y:\Entity\GPI\G_200_Site_Incahuasi\05_PRODUCCION\01. REPORTES\1.1. Diarios\15 Libro de Novedades\1.-Programa\Base de Datos\LIBRONOVEDADES_be.accdb;')
+                r'DBQ=Y:\Entity\GPI\G_200_Site_Incahuasi\05_PRODUCCION\01. REPORTES\1.1. Diarios\15 Libro de Novedades\1.-Programa\Base de Datos\LIBRONOVEDADES_be.accdb;'
+                r'Mode=Read;')
     conn = pyodbc.connect(conn_str)
     
     cursor = conn.cursor()
