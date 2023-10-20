@@ -5,7 +5,7 @@ import plotly.express as px
 
 
 st.set_page_config(layout="wide")
-
+@st.cache_resource
 def load_data():
     try:
         conn_str = (r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
