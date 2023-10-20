@@ -7,7 +7,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 st.set_page_config(layout="wide")
-
+@st.cache_data
 def load_data():
 
     conn_str = (r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
