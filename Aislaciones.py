@@ -2,12 +2,22 @@ import streamlit as st
 import pyodbc
 import pandas as pd
 
+def main():
+  container.write(" # Data Analysis and Visualization # ")
+
+  file = st.sidebar.file_uploader("Upload a database")
+
+  options = st.sidebar.radio('Pages',options = ['Data Analysis','Data visualization', 'Data Prediction'])
+
+  if file is not None:
+    data = load_data(file)
 
 
-def load_data():
+@st.cache_data
+def load_data(file):
     try:
         conn_str = (r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-                    r'DBQ=Y:\Entity\GPI\G_200_Site_Incahuasi\05_PRODUCCION\01. REPORTES\1.1. Diarios\15 Libro de Novedades\1.-Programa\Base de Datos\LIBRONOVEDADES_be.accdb;'
+                    r'DBQ=file;'
                     r'Mode=Read;')
         conn = pyodbc.connect(conn_str)
         
@@ -38,4 +48,5 @@ def load_data():
 
     return d
          
-d = load_data()
+if __name__ == "__main__":
+  main()
