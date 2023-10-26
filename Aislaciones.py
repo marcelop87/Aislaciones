@@ -3,7 +3,7 @@ import pyodbc
 import pandas as pd
 
 def main():
-  container.write(" # Data Analysis and Visualization # ")
+  
 
   file = st.sidebar.file_uploader("Upload a database")
 
