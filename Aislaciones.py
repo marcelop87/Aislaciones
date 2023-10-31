@@ -48,15 +48,15 @@ if file is not None:
         col1, col2= st.columns(2)
         with col1:
             st.write('**Asilaciones de Proceso Largo Plazo**')
-            st.dataframe(CAP_largo, hide_index=True)
+            st.dataframe(CAP_largo)
             st.write('**Asilaciones de Proceso Corto Plazo**')
-            st.dataframe(CAP_corto, hide_index=True)
+            st.dataframe(CAP_corto)
          
         with col2:
              st.write('**Asilaciones Electricas Largo Plazo**')
-             st.dataframe(CAE_largo, hide_index=True)
+             st.dataframe(CAE_largo)
              st.write('**Asilaciones Electricas Corto Plazo**')
-             st.dataframe(CAE_corto, hide_index=True)
+             st.dataframe(CAE_corto)
         
    with st.container():
         
