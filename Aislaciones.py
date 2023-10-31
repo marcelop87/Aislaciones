@@ -48,7 +48,7 @@ if file is not None:
         col1, col2= st.columns(2)
         with col1:
             st.write('**Asilaciones de Proceso Largo Plazo**')
-            st.dataframe(CAP_largo.style.hide(axis="index"))
+            st.dataframe(CAP_largo)
             st.write('**Asilaciones de Proceso Corto Plazo**')
             st.dataframe(CAP_corto.style.hide(axis="index"))
          
