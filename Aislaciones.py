@@ -50,7 +50,7 @@ if file is not None:
             st.write('**Asilaciones de Proceso Largo Plazo**')
             st.dataframe(CAP_largo.style.hide_index())
             st.write('**Asilaciones de Proceso Corto Plazo**')
-            st.dataframe(CAP_corto..style.hide_index())
+            st.dataframe(CAP_corto.style.hide_index())
          
         with col2:
              st.write('**Asilaciones Electricas Largo Plazo**')
