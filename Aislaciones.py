@@ -12,7 +12,9 @@ def load_data(file):
    return CAP, CAE
 
 if file is not None:
-   CAP, CAE = load_data(file)  
+   CAP, CAE = load_data(file)
+   CAP['Fecha'] = CAP['Fecha'].dt.date
+   CAE['Fecha'] = CAE['Fecha'].dt.date
    
    CAP_largo = CAP[CAP['LP']==True]
    CAP_corto = CAP[CAP['Tipo']=='Corto Plazo']
